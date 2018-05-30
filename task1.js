@@ -6,7 +6,8 @@ var requiredNumberSystem = Number(process.argv[3]);
 for (var i = 0; i >= 0; i++) {
     if (i.toString(numberSystem) == number) {
         var res = i.toString(requiredNumberSystem);
-        console.log(res);
+        res = String(res);
+        process.stdout.write(res);
         break;
     } 
 } 
