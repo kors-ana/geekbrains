@@ -4,7 +4,11 @@ var day = process.argv[1];
 var month = m[process.argv[2]];
 var year = process.argv[3];
 
-var newYearDate = new Date(year, 11, 31);
-var nowDate = new Date(year, month, day);
-var res = String((newYearDate - nowDate) / 86400000);
-process.stdout.write(res);
+if (day >=1 && day <= 31 && year >= 1 && year <= 2999 && (process.argv[3] in m)) {
+    var newYearDate = new Date(year, 11, 31);
+    var nowDate = new Date(year, month, day);
+    var res = String((newYearDate - nowDate) / 86400000);
+    process.stdout.write(res);
+} else {
+    throw new Error('Range error');
+}
