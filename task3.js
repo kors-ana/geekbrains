@@ -15,7 +15,7 @@ if (num1 >=1 && num1 <= 100000 && num2 >=1 && num2 <=100000) {
             } else {
                 sec = sec + ' секунд';
             }
-        console.log(sec);
+        process.stdout.write(sec);
     }
 
     if (60 <= sum && sum < 3600) {
@@ -36,7 +36,7 @@ if (num1 >=1 && num1 <= 100000 && num2 >=1 && num2 <=100000) {
             } else {
                 sec = sec + ' секунд';
             }
-        console.log(min, sec);
+        process.stdout.write(min, sec);
     }
 
     if (3600 <= sum) {
@@ -70,7 +70,7 @@ if (num1 >=1 && num1 <= 100000 && num2 >=1 && num2 <=100000) {
                 } else {
                     sec = sec + ' секунд';
                 }
-            console.log(hours, min, sec);
+            process.stdout.write(hours, min, sec);
         }  
     }
 } else {
