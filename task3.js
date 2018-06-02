@@ -74,5 +74,5 @@ if (num1 >=1 && num1 <= 100000 && num2 >=1 && num2 <=100000) {
         }  
     }
 } else {
-     throw new Error('Range error')
+     process.stdout.write('Enter suitable data');
 };

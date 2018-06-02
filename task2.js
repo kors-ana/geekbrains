@@ -10,5 +10,5 @@ if (day >=1 && day <= 31 && year >= 1 && year <= 2999 && (process.argv[3] in m))
     var res = String((newYearDate - nowDate) / 86400000);
     process.stdout.write(res);
 } else {
-    throw new Error('Range error');
+    process.stdout.write('Enter suitable data');
 }

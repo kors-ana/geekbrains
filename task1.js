@@ -12,6 +12,6 @@ if (number >=0 && number <= 10000 && numberSystem >=2 && requiredNumberSystem <=
         } 
     }
 } else {
-    throw new Error ('Range Error');
+    process.stdout.write('Enter suitable data');
 }
  
