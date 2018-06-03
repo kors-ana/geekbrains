@@ -1,5 +1,5 @@
-var num1 = Number(process.argv[1]);
-var num2 = Number(process.argv[2]);
+var num1 = Number(process.argv[2]);
+var num2 = Number(process.argv[3]);
 var hours = 0;
 var min = 0;
 var sec = 0;
