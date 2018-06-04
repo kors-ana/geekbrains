@@ -1,17 +1,21 @@
-var number = Number(process.argv[2]);
+var number = process.argv[2];
 var numberSystem = Number(process.argv[3]);
 var requiredNumberSystem = Number(process.argv[4]);
 
-if (number >=0 && number <= 10000 && numberSystem >=2 && requiredNumberSystem <= 36) {
-    for (var i = 0; i >= 0; i++) {
-        if (i.toString(numberSystem) == number) {
-            var res = i.toString(requiredNumberSystem);
-            res = String(res);
-            process.stdout.write(res);
-            break;
-        } 
+function convertNumbers(number, numberSystem, requiredNumberSystem) {
+    var res = 0;
+    if (numberSystem == 2) {
+        for (var i = 0; i >= 0; i++) {
+            if (i.toString(numberSystem) == number) {
+            res = i.toString(requiredNumberSystem);
+            }
+        }
+    } else {
+        res = parseInt(number, numberSystem);
+        res = res.toString(requiredNumberSystem);
     }
-} else {
-    process.stdout.write('Enter suitable data');
+
+    return res;
 }
- 
+
+console.log(convertNumbers(number, numberSystem, requiredNumberSystem));
