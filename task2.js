@@ -4,11 +4,13 @@ var day = process.argv[2];
 var month = m[process.argv[3]];
 var year = process.argv[4];
 
-if (day >=1 && day <= 31 && year >= 1 && year <= 2999 && (process.argv[3] in m)) {
-    var newYearDate = new Date(year, 11, 31);
-    var nowDate = new Date(year, month, day);
-    var res = String((newYearDate - nowDate) / 86400000);
-    process.stdout.write(res);
-} else {
-    process.stdout.write('Enter suitable data');
+function howMuch(day, month, year) {
+    if (day >=1 && day <= 31 && year >= 1 && year <= 2999 && (process.argv[3] in m)) {
+        var newYearDate = new Date(year, 11, 31);
+        var nowDate = new Date(year, month, day);
+        var res = String((newYearDate - nowDate) / 86400000);
+        return res;
+    } 
 }
+    
+process.stdout.write(howMuch(day, month, year));
