@@ -8,6 +8,8 @@ function convertNumbers(number, numberSystem, requiredNumberSystem) {
         for (var i = 0; i >= 0; i++) {
             if (i.toString(numberSystem) == number) {
             res = i.toString(requiredNumberSystem);
+            } else {
+                return NaN;
             }
         }
     } else {
