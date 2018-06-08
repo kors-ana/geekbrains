@@ -4,13 +4,9 @@ var num2 = Number(process.argv[3]);
     function getTimeSum(num1, num2) {
         
         var sum = num1 + num2;
-        var d = new Date();
-        d.setHours(0);
-        d.setMinutes(0);
-        d.setSeconds(sum);
-        var hours = d.getHours();
-        var min = d.getMinutes();
-        var sec = d.getSeconds();
+        var hours = Math.floor(sum / 3600);
+        var min = Math.floor(sum / 60 % 60);
+        var sec = Math.floor(sum % 60);
         var time = hours + ' ' + min + ' ' + sec;
 
         if (hours % 10 == 1) {
@@ -55,8 +51,11 @@ var num2 = Number(process.argv[3]);
         if (min == "0 минут" && sec == "0 секунд") {
             time = hours;
         } 
-        if (min != "0 минут" & min != "0 минут" && sec != "0 секунд") {
+        if (hours != "0 часов" & min != "0 минут" && sec != "0 секунд") {
             time = hours + ' ' + min + ' ' + sec;
+        }
+        if (sum == 0) {
+            time = '0 секунд';
         }
 
         return time;
