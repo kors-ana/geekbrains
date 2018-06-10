@@ -5,12 +5,15 @@ var requiredNumberSystem = Number(process.argv[4]);
 function convertNumbers(number, numberSystem, requiredNumberSystem) {
     var res = 0;
     if (numberSystem == 2) {
-        for (var i = 0; i >= 0; i++) {
-            if (i.toString(numberSystem) == number) {
-            res = i.toString(requiredNumberSystem);
-            } else {
-                NaN;
+        if (number % 10 == 0 || number % 10 == 1) {
+            for (var i = 0; i >= 0; i++) {
+                if (i.toString(numberSystem) == number) {
+                    res = i.toString(requiredNumberSystem);
+                    break;
+                }
             }
+        } else {
+            res = NaN;
         }
     } else {
         res = parseInt(number, numberSystem);
